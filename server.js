@@ -32,7 +32,7 @@ app.get(`/productoRandom`, (req, res) => {
           let random = Math.trunc(Math.random() * ((allData.length) - 0) + 0);
           let dataRandom = await miContenedor.getById(random);
           //res.send(dataRandom);
-          res.send(`<h1>Producto random: ${dataRandom[0].title}</h1>`);
+          res.send(`<h4>Producto random: ${JSON.stringify(dataRandom)}</h4>`);
       } catch (err) {
           console.error(err);
       }
