@@ -36,6 +36,7 @@ class Contenedor {
         if (!data) {
             let datos = [];
             product.id = newId;
+            product.title=product.title +1 ;
             // product.title = product.title[newId];
             // product.price = product.price[newId];
             // product.thumbnail = product.thumbnail[newId];
@@ -46,6 +47,7 @@ class Contenedor {
         } else {
             let datos = JSON.parse(data);
             product.id = datos.map(item => item.id).reduce((a, b) => Math.max(a, b), 0) + 1,
+            product.title= product.title + (datos.length +1)  ;
             // product.title = product.title[product.id];
             // product.price = product.price[product.id];
             // product.thumbnail = product.thumbnail[product.id];
@@ -110,7 +112,7 @@ module.exports = Contenedor;
 // ]
 
 
-let contenedor = new Contenedor(`./EjercicioProductos/productos.txt`);
+let contenedor = new Contenedor(`./productos.txt`);
 async function test() {
 
    
@@ -119,7 +121,7 @@ async function test() {
         // title: tableros.map(item => item.title),
         // price: tableros.map(item => item.price),
         // thumbnail: tableros.map(item => item.thumbnail)
-        title: `Tablero`,
+        title: `Tablero `,
         price:  Math.floor(Math.random() * 1000),
         thumbnail:  `https://comprarajedrez.com/wp-content/uploads/2020/03/81hM8ahioQL._SL1500_.jpg`
     };
