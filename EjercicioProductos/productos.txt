@@ -1,20 +1,8 @@
 [
   {
-    "title": "Tablero de vinilo",
-    "price": 2000,
-    "thumbnail": "https://www.ichess.net/wp-content/uploads/2021/07/Regulation-Tournament-Chess-Pieces-and-Chess-Board-Combo-Green.jpg",
+    "title": "Tablero",
+    "price": 358,
+    "thumbnail": "https://comprarajedrez.com/wp-content/uploads/2020/03/81hM8ahioQL._SL1500_.jpg",
     "id": 1
-  },
-  {
-    "title": "Tablero imantado",
-    "price": 3000,
-    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_948013-MCO44575103545_012021-O.webp",
-    "id": 2
-  },
-  {
-    "title": "Tablero triple",
-    "price": 9000,
-    "thumbnail": "https://dejadepensar.com/wp-content/uploads/2018/01/Tablero-de-ajedrez-para-3-jugadores.jpg",
-    "id": 3
   }
 ]

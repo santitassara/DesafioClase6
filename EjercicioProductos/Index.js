@@ -110,7 +110,7 @@ module.exports = Contenedor;
 // ]
 
 
-let contenedor = new Contenedor(`./productos.txt`);
+let contenedor = new Contenedor(`./EjercicioProductos/productos.txt`);
 async function test() {
 
    
