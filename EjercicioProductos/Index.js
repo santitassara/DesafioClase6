@@ -11,7 +11,8 @@ class Contenedor {
             return data;
 
         } catch (err) {
-            throw Error(`Error al leer el archivo ${err}`);
+            // throw Error(`Error al leer el archivo ${err}`);
+            await fs.promises.writeFile(`./${this.archivo}`, []);
         }
     }
 
@@ -27,6 +28,7 @@ class Contenedor {
     async save(product) {
         let newId = 1;
         let newProduct = {};
+        
 
         let data = await this.read();
        
@@ -36,6 +38,7 @@ class Contenedor {
         if (!data) {
             let datos = [];
             product.id = newId;
+            product.title=product.title +1 ;
             // product.title = product.title[newId];
             // product.price = product.price[newId];
             // product.thumbnail = product.thumbnail[newId];
@@ -46,6 +49,7 @@ class Contenedor {
         } else {
             let datos = JSON.parse(data);
             product.id = datos.map(item => item.id).reduce((a, b) => Math.max(a, b), 0) + 1,
+            product.title= product.title + (datos.length +1)  ;
             // product.title = product.title[product.id];
             // product.price = product.price[product.id];
             // product.thumbnail = product.thumbnail[product.id];
@@ -108,6 +112,7 @@ module.exports = Contenedor;
 //   {title:"Tablero de inteligente",price:5000,thumbnail:"https://d500.epimg.net/cincodias/imagenes/2021/04/16/gadgets/1618561045_541719_1618561401_sumario_normal.jpg"},
 
 // ]
+
 
 
 let contenedor = new Contenedor(`./EjercicioProductos/productos.txt`);

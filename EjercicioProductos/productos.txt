@@ -4,5 +4,17 @@
     "price": 358,
     "thumbnail": "https://comprarajedrez.com/wp-content/uploads/2020/03/81hM8ahioQL._SL1500_.jpg",
     "id": 1
+  },
+  {
+    "title": "Tablero2",
+    "price": 132,
+    "thumbnail": "https://comprarajedrez.com/wp-content/uploads/2020/03/81hM8ahioQL._SL1500_.jpg",
+    "id": 2
+  },
+  {
+    "title": "Tablero3",
+    "price": 211,
+    "thumbnail": "https://comprarajedrez.com/wp-content/uploads/2020/03/81hM8ahioQL._SL1500_.jpg",
+    "id": 3
   }
 ]
